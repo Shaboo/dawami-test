@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UIClone.Controls"
+             x:Class="UIClone.Controls.CustomEntry">
+    <ContentView.Content>
+        <StackLayout BackgroundColor="Transparent"
+                     Padding="0">
+            <Grid>
+                <Frame x:Name="frmFancy"
+                       BorderColor="White"
+                       CornerRadius="5"
+                       Padding="0"
+                       BackgroundColor="Transparent"
+                       HasShadow="False" />
+                <Label x:Name="lblEntry"
+                       AnchorY="1"
+                       AnchorX="0"
+                       Margin="10"
+                       Padding="3"
+                       TextColor="White"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Grid ColumnDefinitions="9*,*">
+                    <local:myEntry Grid.Column="0"
+                                   Grid.Row="0"
+                                   x:Name="ent"
+                                   TextColor="White"
+                                   BackgroundColor="Transparent" />
+
+                    <Image Grid.Column="1"
+                           Grid.Row="0"
+                           Aspect="AspectFit"
+                           x:Name="imgIcon">
+                        <Image.WidthRequest>
+                            <OnIdiom x:TypeArguments="x:Double"
+                                     Phone="48"
+                                     Tablet="100" />
+                        </Image.WidthRequest>
+
+                        <Image.HeightRequest>
+                            <OnIdiom x:TypeArguments="x:Double"
+                                     Phone="48"
+                                     Tablet="100" />
+                        </Image.HeightRequest>
+                    </Image>
+                </Grid>
+
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

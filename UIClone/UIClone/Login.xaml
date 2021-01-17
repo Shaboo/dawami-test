@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Visual="Material"
+             xmlns:local="clr-namespace:UIClone.Controls"
+             x:Class="UIClone.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Padding>
+                <OnIdiom x:TypeArguments="Thickness"
+                         Tablet="30"
+                         Phone="10" />
+            </StackLayout.Padding>
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="1,0">
+                    <GradientStop Color="#248faa"
+                                  Offset="0.1" />
+                    <GradientStop Color="#163561"
+                                  Offset="1.0" />
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Grid RowDefinitions="Auto"
+                  ColumnDefinitions="*,*,*">
+                <Grid.Margin>
+                    <OnIdiom x:TypeArguments="Thickness"
+                             Tablet="0,30,0,0"
+                             Phone="0,25,0,0" />
+                </Grid.Margin>
+                <Grid Grid.Row="0"
+                      Grid.Column="0"
+                      RowDefinitions="Auto"
+                      HorizontalOptions="Start"
+                      ColumnDefinitions="*,2*">
+                    <Image Grid.Row="0"
+                           Grid.Column="0"
+                           HorizontalOptions="End"
+                           Source="back.png" />
+
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           HorizontalOptions="Start"
+                           Text="Login"
+                           TextColor="White"
+                           FontSize="Large" />
+                </Grid>
+
+                <Image Grid.Row="0"
+                       Grid.Column="2"
+                       HorizontalOptions="End"
+                       Source="dawamy_small_logo.png" />
+            </Grid>
+
+            <Label Text="Please enter your credential"
+                   Margin="0,25,0,20"
+                   TextColor="White"
+                   FontSize="Medium">
+                <Label.FontSize>
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Tablet="30"
+                             Phone="15" />
+                </Label.FontSize>
+            </Label>
+
+            <local:CustomEntry PlaceHolder="User name"
+                               Source="user.png">
+                <local:CustomEntry.Margin>
+                    <OnIdiom x:TypeArguments="Thickness"
+                             Tablet="0,0,0,30"
+                             Phone="0,0,0,20" />
+                </local:CustomEntry.Margin>
+            </local:CustomEntry>
+
+            <local:CustomEntry PlaceHolder="Password"
+                               IsPassword="true"
+                               Source="lock.png">
+                <local:CustomEntry.Margin>
+                    <OnIdiom x:TypeArguments="Thickness"
+                             Tablet="0,0,0,30"
+                             Phone="0,0,0,20" />
+                </local:CustomEntry.Margin>
+            </local:CustomEntry>
+
+            <Button CornerRadius="5"
+                    BackgroundColor="#94c221"
+                    Text="Login"
+                    Clicked="Button_Clicked"
+                    FontSize="Large" />
+
+            <Label Text="Gantner"
+                   HorizontalOptions="Center"
+                   TextColor="White">
+                <Label.Margin>
+                    <OnIdiom x:TypeArguments="Thickness"
+                             Tablet="0,50,0,0"
+                             Phone="0,50,0,0" />
+                </Label.Margin>
+
+                <Label.FontSize>
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Tablet="60"
+                             Phone="50" />
+                </Label.FontSize>
+            </Label>
+
+            <Label Text="Gantner Electronic"
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   TextColor="White" />
+
+            <Label Text="GMBH"
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
